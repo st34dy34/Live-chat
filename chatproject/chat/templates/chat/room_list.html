@@ -1,0 +1,28 @@
+{% extends "chat/base.html" %} {% block title %}Místnosti{% endblock %} {% block content %}
+<h2>Seznam místností</h2>
+
+{% if user.is_authenticated %}
+<a
+  href="{% url 'room-create' %}"
+  style="
+    display: inline-block;
+    margin-bottom: 1em;
+    background: #4caf50;
+    color: white;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    border-radius: 5px;
+  "
+>
+  + Vytvořit novou místnost
+</a>
+{% endif %}
+
+<ul>
+  {% for room in rooms %}
+  <li><a href="{% url 'room-detail' slug=room.slug %}">{{ room.name }}</a></li>
+  {% empty %}
+  <li>Žádné místnosti nejsou dostupné.</li>
+  {% endfor %}
+</ul>
+{% endblock %}

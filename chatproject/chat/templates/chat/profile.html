@@ -1,0 +1,5 @@
+{% extends "chat/base.html" %} {% block title %}Profil{% endblock %} {% block content %}
+<h2>Vítej, {{ user.username }}!</h2>
+<p>Jsi přihlášen jako: {{ user.email|default:"(bez e-mailu)" }}</p>
+<p><a href="{% url 'logout' %}">Odhlásit se</a></p>
+{% endblock %}
