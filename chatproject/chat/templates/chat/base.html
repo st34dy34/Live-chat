@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="cs">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <title>{% block title %}Live Chat{% endblock %}</title>
@@ -57,24 +57,24 @@
     <header>
       <nav>
         <div class="nav-left">
-          <a href="{% url 'home' %}">Domů</a>
-          <a href="{% url 'about' %}">O nás</a>
-          <a href="{% url 'room-list' %}">Místnosti</a>
+          <a href="{% url 'home' %}">Home</a>
+          <a href="{% url 'about' %}">About Us</a>
+          <a href="{% url 'room-list' %}">Rooms</a>
 
           {% if user.is_authenticated %}
           <form method="post" action="{% url 'logout' %}" style="display: inline">
             {% csrf_token %}
-            <button type="submit" class="nav-link-button">Odhlásit se</button>
+            <button type="submit" class="nav-link-button">Logout</button>
           </form>
           {% else %}
-          <a href="{% url 'login' %}">Přihlásit se</a>
-          <a href="{% url 'register' %}">Registrovat se</a>
+          <a href="{% url 'login' %}">Login</a>
+          <a href="{% url 'register' %}">Register</a>
           {% endif %}
         </div>
 
         {% if user.is_authenticated %}
         <div class="nav-right">
-          <a href="{% url 'profile' %}">Ahoj, {{ user.username }}!</a>
+          <a href="{% url 'profile' %}">Hi, {{ user.username }}!</a>
         </div>
         {% endif %}
       </nav>

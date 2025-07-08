@@ -1,7 +1,10 @@
-{% extends "chat/base.html" %} {% block title %}Nová místnost{% endblock %} {% block content %}
-<h2>Vytvořit novou místnost</h2>
+{% extends "chat/base.html" %}
+{% block title %}New Room{% endblock %}
+{% block content %}
+<h2>Create a New Room</h2>
 <form method="post">
-  {% csrf_token %} {{ form.as_p }}
-  <button type="submit">Vytvořit</button>
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Create</button>
 </form>
 {% endblock %}

@@ -1,7 +1,9 @@
-{% extends "chat/base.html" %} {% block title %}Přihlášení{% endblock %} {% block content %}
-<h2>Přihlásit se</h2>
+{% extends "chat/base.html" %}
+{% block title %}Login{% endblock %}
+{% block content %}
+<h2>Login</h2>
 <form method="post">
   {% csrf_token %} {{ form.as_p }}
-  <button type="submit">Přihlásit</button>
+  <button type="submit">Log In</button>
 </form>
 {% endblock %}
