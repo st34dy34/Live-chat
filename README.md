@@ -3,7 +3,8 @@
 This is a real-time web chat application built using Django Channels and Daphne. It demonstrates that it's possible to implement WebSocket communication in Django to enable instant messaging between users without page reloads.
 
 ---
-![image](https://github.com/user-attachments/assets/880dc3dd-7a17-4610-a601-dff9e407923e)
+<img src="https://i.imgur.com/k6JdNum.png" alt="My Image" width="500" />
+
 
 
 
